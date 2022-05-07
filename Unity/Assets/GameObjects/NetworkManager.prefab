@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7627243247459818596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2796176250531411250}
+  - component: {fileID: 936636916548293207}
+  - component: {fileID: 8134591660439727183}
+  m_Layer: 0
+  m_Name: NetworkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2796176250531411250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627243247459818596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936636916548293207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627243247459818596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772a79ff5fec82c4c802dc4c436bd9f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  startOnHeadless: 1
+  showDebugMessages: 0
+  serverTickRate: 60
+  offlineScene: 
+  onlineScene: Assets/Scenes/Scene_Lobby.unity
+  transport: {fileID: 8134591660439727183}
+  networkAddress: localhost
+  maxConnections: 4
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 300
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 7500621865436789472, guid: 266a98cbcd712fe4180fcb1433ea5ee0,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+  minPlayers: 1
+  menuScene: Assets/Scenes/Scene_Lobby.unity
+  roomPlayerPrefab: {fileID: 8055624249192620947, guid: cf402ee9183ed5e4f8f94ca053a1c483,
+    type: 3}
+  gamePlayerPrefab: {fileID: 2376567470963339270, guid: 841693cd32b7d8e47a3c831316b9614c,
+    type: 3}
+  playerSpawnSystem: {fileID: 6542760776973988079, guid: 396846c5f9513224cae11c2a39258ead,
+    type: 3}
+  sprites:
+  - {fileID: 21300000, guid: 9f697db04ebb36a4b9e3cfe9582fd872, type: 3}
+  - {fileID: 21300000, guid: 7625e26f538233c4a93d48968bf10b3e, type: 3}
+  - {fileID: 21300000, guid: 23bab658c746ef142bc7f424204d0c93, type: 3}
+  - {fileID: 21300000, guid: 9fc47a99a42ef98428a51c02198321ec, type: 3}
+--- !u!114 &8134591660439727183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627243247459818596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClientConnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnClientDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.ClientDataReceivedEvent, Mirror, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnClientError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.UnityEventException, Mirror, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnClientDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnServerConnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.UnityEventInt, Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnServerDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.ServerDataReceivedEvent, Mirror, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnServerError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.UnityEventIntException, Mirror, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnServerDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Mirror.UnityEventInt, Mirror, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  port: 7777
+  NoDelay: 1
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
